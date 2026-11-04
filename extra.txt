@@ -1,0 +1,26 @@
+# nombre,simbolo (CNBC). Los que no existan saldran SIN DATO.
+FUT S&P 500 a,@SP.1
+FUT Nasdaq 100 a,@ND.1
+FUT Dow a,@DJ.1
+FUT S&P 500 b,@ES1.1
+FUT Nasdaq 100 b,@NQ1.1
+FUT Dow b,@YM1.1
+FUT DAX d,@GX.1
+FUT DAX e,@FDAX1.1
+FUT DAX f,@DY.1
+FUT DAX g,@FDXM.1
+FUT EuroStoxx50 c,@VG.1
+FUT EuroStoxx50 d,@FX.1
+FUT EuroStoxx50 e,@STXE.1
+FUT CAC 40 c,@CF.1
+FUT IBEX b,@IB.1
+FUT IBEX c,@FIBX.1
+FUT SMI b,@SM.1
+FUT MIB b,@ST.1
+FUT ASX SPI,@XP.1
+IDX WIG20 b,.WIG
+IDX WIG20 c,.WIG20.PL
+IDX WIG20 d,WIG20.WA
+IDX ATX b,.ATX.VI
+IDX ATX c,ATX.VI
+IDX ATX d,.ATXI
