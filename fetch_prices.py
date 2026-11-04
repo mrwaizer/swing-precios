@@ -22,6 +22,7 @@ SYMS = [
  # ---- FUTUROS que funcionan ----
  ("FUT Russell 2000", "@TFS.1", None), ("FUT VIX", "@VX.1", None), ("FUT DXY", "@DX.1", None),
  ("FUT Nikkei", "@NK.1", None), ("FUT FTSE 100", "@FFI.1", None),
+ ("FUT S&P 500", "@SP.1", None), ("FUT Nasdaq 100", "@ND.1", None), ("FUT Dow (verificar)", "@DJ.1", None),
 ]
 
 # simbolos extra para probar: archivo extra.txt, una linea por simbolo: nombre,simbolo
@@ -37,7 +38,7 @@ except FileNotFoundError:
 now = dt.datetime.now(dt.timezone.utc)
 probe = []
 
-# ---- CNBC: una sola peticion con todos ----
+# ---- CNBC: una sola peticion con los 38 ----
 cnbc = {}
 try:
     syms = "|".join(s[1] for s in SYMS)
