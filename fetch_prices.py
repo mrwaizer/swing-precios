@@ -19,12 +19,22 @@ SYMS = [
  ("USD/CAD", "CAD=", None), ("AUD/USD", "AUD=", None), ("NZD/USD", "NZD=", None), ("USD/CHF", "CHF=", None),
  ("EUR/GBP", "EURGBP=", None), ("EUR/JPY", "EURJPY=", None), ("CAD/JPY", "CADJPY=", None),
  ("Treasury 2Y (rendimiento)", "US2Y", None), ("Treasury 10Y (rendimiento)", "US10Y", None),
+ # ---- FUTUROS (prueba: los simbolos que no existan saldran SIN DATO) ----
+ ("FUT S&P 500", "@ES.1", None), ("FUT Nasdaq 100", "@NQ.1", None), ("FUT Dow", "@YM.1", None),
+ ("FUT Russell 2000 (a)", "@RTY.1", None), ("FUT Russell 2000 (b)", "@TFS.1", None),
+ ("FUT VIX", "@VX.1", None), ("FUT DXY", "@DX.1", None),
+ ("FUT Nikkei (a)", "@NK.1", None), ("FUT Nikkei (b)", "@NKD.1", None),
+ ("FUT DAX (a)", "@FDAX.1", None), ("FUT DAX (b)", "@DAX.1", None), ("FUT DAX (c)", "@FDX.1", None),
+ ("FUT EuroStoxx50 (a)", "@FESX.1", None), ("FUT EuroStoxx50 (b)", "@FSX.1", None),
+ ("FUT FTSE 100 (a)", "@Z.1", None), ("FUT FTSE 100 (b)", "@FFI.1", None),
+ ("FUT CAC 40 (a)", "@FCE.1", None), ("FUT CAC 40 (b)", "@CAC.1", None),
+ ("FUT IBEX", "@IBEX.1", None), ("FUT SMI", "@FSMI.1", None), ("FUT MIB", "@FIB.1", None),
 ]
 
 now = dt.datetime.now(dt.timezone.utc)
 probe = []
 
-# ---- CNBC: una sola peticion con los 38 ----
+# ---- CNBC: una sola peticion con todos ----
 cnbc = {}
 try:
     syms = "|".join(s[1] for s in SYMS)
