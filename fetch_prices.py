@@ -1,4 +1,4 @@
-import json, time, datetime as dt, requests
+import json, time, sys, subprocess, datetime as dt, requests
 from zoneinfo import ZoneInfo
 
 AND = ZoneInfo("Europe/Andorra")
@@ -19,17 +19,50 @@ SYMS = [
  ("Treasury 2Y (rendimiento)","2YY=F"),("Treasury 10Y (rendimiento)","^TNX"),
 ]
 
-def get(sym):
-    for host in ("query1","query2"):
+try:
+    subprocess.run([sys.executable, "-m", "pip", "install", "-q", "yfinance"], check=False, timeout=240)
+except Exception:
+    pass
+
+ERR = {}
+
+def via_raw(sym):
+    last = "sin respuesta"
+    for host in ("query1", "query2"):
         try:
             r = requests.get(f"https://{host}.finance.yahoo.com/v8/finance/chart/{sym}",
-                             params={"interval":"15m","range":"5d"}, headers=H, timeout=20)
+                             params={"interval": "15m", "range": "5d"}, headers=H, timeout=20)
             if r.status_code == 200:
-                return r.json()["chart"]["result"][0]
-        except Exception:
-            pass
+                res = r.json()["chart"]["result"][0]
+                pts = [(t, c) for t, c in zip(res["timestamp"], res["indicators"]["quote"][0]["close"]) if c is not None]
+                m = res["meta"]
+                return pts, (m.get("chartPreviousClose") or m.get("previousClose"))
+            last = f"raw HTTP {r.status_code}"
+        except Exception as e:
+            last = f"raw {type(e).__name__}"
         time.sleep(1)
+    ERR[sym] = last
     return None
+
+def via_yf(sym):
+    try:
+        import yfinance as yf
+        h = yf.Ticker(sym).history(period="5d", interval="15m")
+        if h is None or len(h) == 0:
+            ERR[sym] = ERR.get(sym, "") + " | yf vacio"
+            return None
+        pts = [(int(i.timestamp()), float(c)) for i, c in zip(h.index, h["Close"]) if c == c]
+        d = yf.Ticker(sym).history(period="5d", interval="1d")
+        prev = None
+        if d is not None and len(d) >= 2:
+            prev = float(d["Close"].iloc[-2])
+        return pts, prev
+    except Exception as e:
+        ERR[sym] = ERR.get(sym, "") + f" | yf {type(e).__name__}"
+        return None
+
+def get(sym):
+    return via_raw(sym) or via_yf(sym)
 
 now = dt.datetime.now(dt.timezone.utc)
 out = {"generado_utc": now.strftime("%Y-%m-%d %H:%M"),
@@ -40,26 +73,23 @@ for name, sym in SYMS:
     row = {"instrumento": name, "simbolo": sym}
     res = get(sym)
     try:
-        ts = res["timestamp"]; cl = res["indicators"]["quote"][0]["close"]
-        pts = [(t, c) for t, c in zip(ts, cl) if c is not None]
+        pts, prev = res
         t_last, last = pts[-1]
-        meta = res["meta"]
-        prev = meta.get("chartPreviousClose") or meta.get("previousClose")
-        t3 = [c for t, c in pts if t <= t_last - 3*3600]
+        t3 = [c for t, c in pts if t <= t_last - 3 * 3600]
         ref3 = t3[-1] if t3 else None
         age = (now.timestamp() - t_last) / 60
         row.update(ultimo=round(last, 4),
-                   var_vs_cierre_previo_pct=round((last/prev-1)*100, 2) if prev else None,
-                   var_3h_pct=round((last/ref3-1)*100, 2) if ref3 else None,
+                   var_vs_cierre_previo_pct=round((last / prev - 1) * 100, 2) if prev else None,
+                   var_3h_pct=round((last / ref3 - 1) * 100, 2) if ref3 else None,
                    hora_dato_andorra=dt.datetime.fromtimestamp(t_last, AND).strftime("%Y-%m-%d %H:%M"),
                    antiguedad_min=round(age), estado="ok")
     except Exception:
-        row.update(estado="SIN DATO")
+        row.update(estado="SIN DATO: " + ERR.get(sym, "?"))
     out["datos"].append(row)
     lines.append(" | ".join(str(row.get(k, "-")) for k in
-        ["instrumento","simbolo","ultimo","var_vs_cierre_previo_pct","var_3h_pct","hora_dato_andorra","antiguedad_min","estado"]))
+        ["instrumento", "simbolo", "ultimo", "var_vs_cierre_previo_pct", "var_3h_pct", "hora_dato_andorra", "antiguedad_min", "estado"]))
     time.sleep(0.4)
 
-json.dump(out, open("precios.json","w"), ensure_ascii=False, indent=1)
-open("precios.txt","w").write("\n".join(lines) + "\n")
+json.dump(out, open("precios.json", "w"), ensure_ascii=False, indent=1)
+open("precios.txt", "w").write("\n".join(lines) + "\n")
 print("\n".join(lines))
