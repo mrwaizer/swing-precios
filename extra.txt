@@ -1,26 +1,27 @@
-# nombre,simbolo (CNBC). Los que no existan saldran SIN DATO.
-FUT S&P 500 a,@SP.1
-FUT Nasdaq 100 a,@ND.1
-FUT Dow a,@DJ.1
-FUT S&P 500 b,@ES1.1
-FUT Nasdaq 100 b,@NQ1.1
-FUT Dow b,@YM1.1
-FUT DAX d,@GX.1
-FUT DAX e,@FDAX1.1
-FUT DAX f,@DY.1
-FUT DAX g,@FDXM.1
-FUT EuroStoxx50 c,@VG.1
-FUT EuroStoxx50 d,@FX.1
-FUT EuroStoxx50 e,@STXE.1
-FUT CAC 40 c,@CF.1
-FUT IBEX b,@IB.1
-FUT IBEX c,@FIBX.1
-FUT SMI b,@SM.1
-FUT MIB b,@ST.1
-FUT ASX SPI,@XP.1
-IDX WIG20 b,.WIG
-IDX WIG20 c,.WIG20.PL
-IDX WIG20 d,WIG20.WA
-IDX ATX b,.ATX.VI
-IDX ATX c,ATX.VI
-IDX ATX d,.ATXI
+# nombre,simbolo (CNBC). Ronda 3. Los que no existan saldran SIN DATO.
+FUT DAX h,@DAX.1
+FUT DAX i,@GDAX.1
+FUT DAX j,DE30=
+FUT DAX k,@FDX.1
+FUT DAX l,@FDAX.1
+FUT DAX m,@DAX1.1
+FUT DAX n,FDAX
+FUT DAX o,.GDAXIP
+FUT DAX p,@FDXS.1
+FUT DAX q,@GDX.1
+FUT EuroStoxx50 f,@FESX.1
+FUT EuroStoxx50 g,@FESX1.1
+FUT EuroStoxx50 h,@SX5E.1
+FUT EuroStoxx50 i,@XESX.1
+FUT CAC 40 d,@FCE.1
+FUT CAC 40 e,@FCE1.1
+FUT IBEX d,@MIB.1
+FUT IBEX e,@FIBEX.1
+FUT FTSE MIB c,@FIB.1
+FUT FTSE MIB d,@FTMIB.1
+FUT ASX SPI b,@AP.1
+FUT ASX SPI c,@SPI.1
+FUT Nikkei b,@NIY.1
+FUT Nasdaq mini,@NQ.1
+FUT S&P mini,@ES.1
+FUT Dow mini,@YM.1
