@@ -1,4 +1,4 @@
-import json, time, datetime as dt, requests
+import json, time, csv, os, datetime as dt, requests
 from zoneinfo import ZoneInfo
 
 AND = ZoneInfo("Europe/Andorra")
@@ -58,6 +58,15 @@ try:
 except Exception as e:
     probe.append(f"cnbc ERROR {type(e).__name__} {str(e)[:80]}")
 
+
+# ---- SONDEO experimental: historico diario CNBC (solo diagnostico) ----
+try:
+    _r = requests.get("https://ts-api.cnbc.com/harmony/app/bars/@GC.1/1D/20261001000000/20261231000000/adjusted/EXTENDED.json",
+                      headers=H, timeout=20)
+    probe.append(f"hist-cnbc HTTP {_r.status_code} {len(_r.text)} bytes {_r.text[:90]!r}")
+except Exception as e:
+    probe.append(f"hist-cnbc ERROR {type(e).__name__}")
+
 def num(x):
     try:
         return float(str(x).replace(",", "").replace("%", "").replace("+", ""))
@@ -109,6 +118,48 @@ for name, cs, bs in SYMS:
         ["instrumento", "simbolo", "ultimo", "var_pct", "hora_andorra", "antiguedad_min", "fuente", "estado"])
         + f" | cruda={row.get('hora_cruda','-')} | mercado={row.get('mercado','-')}")
     time.sleep(0.2)
+
+
+# ---- HISTORIAL PROPIO: un valor por instrumento y dia (el ultimo visto de ese dia) ----
+HF = "historial.csv"
+hist = {}
+if os.path.exists(HF):
+    for rw in csv.reader(open(HF, encoding="utf-8")):
+        if len(rw) == 3 and rw[0] != "fecha":
+            try:
+                hist[(rw[0], rw[1])] = float(rw[2])
+            except ValueError:
+                pass
+for rw in out["datos"]:
+    if rw["estado"] == "ok" and rw.get("hora_andorra") and rw.get("ultimo") is not None:
+        hist[(rw["hora_andorra"][:10], rw["instrumento"])] = rw["ultimo"]
+cut = (now - dt.timedelta(days=400)).strftime("%Y-%m-%d")
+hist = {k: v for k, v in hist.items() if k[0] >= cut}
+with open(HF, "w", newline="", encoding="utf-8") as f:
+    w = csv.writer(f)
+    w.writerow(["fecha", "instrumento", "valor"])
+    for (d, n), v in sorted(hist.items()):
+        w.writerow([d, n, v])
+
+lines.append("")
+lines.append("HISTORIAL (desde el historial propio; cada dia = ultimo valor visto ese dia; los dias de 24h como oro o divisas son aproximados; '-' = aun no hay sesiones suficientes)")
+lines.append("instrumento | sesiones en historial | var% vs 1 sesion antes | var% vs 5 sesiones antes | var% vs 20 sesiones antes | max 20 ses | min 20 ses")
+for rw in out["datos"]:
+    n = rw["instrumento"]
+    if n.startswith("FUT"):
+        continue
+    ser = sorted((d, v) for (d, nn), v in hist.items() if nn == n)
+    if rw["estado"] != "ok" or not rw.get("hora_andorra") or not ser:
+        lines.append(f"{n} | {len(ser)} | - | - | - | - | -")
+        continue
+    cur_d, cur = rw["hora_andorra"][:10], rw["ultimo"]
+    prev = [v for d, v in ser if d < cur_d]
+    def pct(k):
+        if len(prev) >= k and prev[-k]:
+            return f"{(cur / prev[-k] - 1) * 100:+.2f}"
+        return "-"
+    win = [v for d, v in ser][-20:]
+    lines.append(f"{n} | {len(ser)} | {pct(1)} | {pct(5)} | {pct(20)} | {max(win)} | {min(win)}")
 
 json.dump(out, open("precios.json", "w"), ensure_ascii=False, indent=1)
 open("precios.txt", "w").write("\n".join(lines) + "\n")
