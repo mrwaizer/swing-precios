@@ -200,6 +200,35 @@ for rw in out["datos"]:
     win = [v for d, v in ser][-20:]
     lines.append(f"{n} | {len(ser)} | {pct(1)} | {pct(5)} | {pct(20)} | {max(win)} | {min(win)}")
 
+# ---- INTRADIA: lecturas de hoy, guardadas dentro de precios.json (sin tocar el workflow) ----
+try:
+    prev_i = json.load(open("precios.json", encoding="utf-8")).get("intradia", {})
+except Exception:
+    prev_i = {}
+if prev_i.get("fecha") != today_s:
+    prev_i = {"fecha": today_s, "series": {}}
+ser_i = prev_i["series"]
+for rw in out["datos"]:
+    hh = rw.get("hora_andorra") or ""
+    if rw.get("estado") == "ok" and hh[:10] == today_s and rw.get("ultimo") is not None:
+        lst = ser_i.setdefault(rw["instrumento"], [])
+        item = [hh[11:16], rw["ultimo"], rw.get("var_pct")]
+        if not lst or lst[-1][:2] != item[:2]:
+            lst.append(item)
+out["intradia"] = prev_i
+lines.append("")
+lines.append("INTRADIA (lecturas de hoy " + today_s + ", hora Andorra del dato; solo instrumentos con dato de hoy)")
+lines.append("instrumento | lecturas | primera (hora=valor) | maximo dia | minimo dia | ultima | retroceso desde maximo % | ultimas 5 (hora=valor)")
+for n, lst in ser_i.items():
+    try:
+        vals = [x[1] for x in lst]
+        mx, mn, last = max(vals), min(vals), vals[-1]
+        retro = f"{(mx - last) / mx * 100:.2f}" if mx else "-"
+        tail = " ".join(f"{x[0]}={x[1]}" for x in lst[-5:])
+        lines.append(f"{n} | {len(lst)} | {lst[0][0]}={lst[0][1]} | {mx} | {mn} | {last} | {retro} | {tail}")
+    except Exception:
+        continue
+
 json.dump(out, open("precios.json", "w"), ensure_ascii=False, indent=1)
 open("precios.txt", "w").write("\n".join(lines) + "\n")
 print("\n".join(lines))
