@@ -1,33 +1,51 @@
 name: precios
 on:
   schedule:
-    - cron: "7 4 * * 1-5"
-    - cron: "37 4 * * 1-5"
-    - cron: "7 5 * * 1-5"
+    - cron: "7,37 4-16 * * 1-5"
   workflow_dispatch:
+    inputs:
+      handoff:
+        description: "relevo automatico (no tocar)"
+        default: "false"
 permissions:
   contents: write
-concurrency:
-  group: precios-loop
-  cancel-in-progress: false
+  actions: write
 jobs:
   run:
     runs-on: ubuntu-latest
-    timeout-minutes: 790
+    timeout-minutes: 355
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 30
       - run: pip install requests
-      - name: Bucle de precios cada ~10 min hasta las 17:40 Andorra
+      - name: Bucle de precios
+        env:
+          GH_TOKEN: ${{ github.token }}
+          HANDOFF: ${{ github.event.inputs.handoff }}
         run: |
           git config user.name "bot"
           git config user.email "bot@users.noreply.github.com"
+          START=$(date +%s)
+          LAST=$(git log -1 --format=%ct -- precios.txt)
+          AGE=$(( START - LAST ))
+          if [ "$HANDOFF" != "true" ] && [ "$AGE" -lt 720 ]; then
+            echo "Otro bucle ya esta actualizando (hace ${AGE}s). Salgo."
+            exit 0
+          fi
           while true; do
             H=$(TZ=Europe/Andorra date +%H%M)
-            if [ "$H" -gt 1745 ]; then break; fi
+            NOW=$(date +%s)
+            if [ "$H" -gt 1745 ] || [ $(( NOW - START )) -gt 20400 ]; then break; fi
             python fetch_prices.py || true
             git add precios.json precios.txt historial.csv
             git commit -m "precios $(date -u +%F_%H:%M)" || echo "sin cambios"
-            git pull --rebase || true
-            git push || true
+            git pull --rebase --autostash || true
+            git push || (git pull --rebase --autostash && git push) || true
             sleep 540
           done
+          H=$(TZ=Europe/Andorra date +%H%M)
+          if [ "$H" -le 1745 ]; then
+            echo "Relevo: lanzo el siguiente bucle"
+            gh workflow run precios.yml -f handoff=true
+          fi
