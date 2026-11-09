@@ -1,12 +1,12 @@
-PRECIOS generados 2026-11-09 06:07 (hora Andorra) / 2026-11-09 05:07 UTC
-SONDEO: cnbc HTTP 200 37929 bytes || cnbc simbolos devueltos 46 || semilla ok=0 fallo=0 claves=
+PRECIOS generados 2026-11-09 07:17 (hora Andorra) / 2026-11-09 06:17 UTC
+SONDEO: cnbc HTTP 200 38095 bytes || cnbc simbolos devueltos 46 || semilla ok=0 fallo=0 claves=
 instrumento | simbolo | ultimo | var% vs cierre previo | hora del dato (cruda/Andorra) | antiguedad min | fuente | estado
 S&P 500 | .SPX | 7376.86 | 0.31 | - | - | cnbc | ok | cruda=2026-11-06 | mercado=REG_MKT
 EE.UU. 2000 (Russell 2000) | .RUT | 2754.105 | 0.89 | - | - | cnbc | ok | cruda=2026-11-06 | mercado=REG_MKT
 EE.UU. 30 (Dow Jones) | .DJI | 51285.73 | -0.46 | - | - | cnbc | ok | cruda=2026-11-06 | mercado=REG_MKT
 Alemania 40 (DAX) | .GDAXI | 25820.36 | None | - | - | cnbc | ok | cruda=2026-11-06 | mercado=REG_MKT
-Japon 225 (Nikkei) | .N225 | 59202.44 | 3.08 | 2026-11-09 05:52 | 15 | cnbc | ok | cruda=2026-11-09T13:52:00.000+0900 | mercado=REG_MKT
-ASX 200 | .AXJO | 9052.8 | 0.35 | 2026-11-09 05:46 | 20 | cnbc | ok | cruda=2026-11-09T14:46:44.000+1000 | mercado=REG_MKT
+Japon 225 (Nikkei) | .N225 | 58790.39 | 2.36 | 2026-11-09 07:02 | 15 | cnbc | ok | cruda=2026-11-09T15:02:05.000+0900 | mercado=REG_MKT
+ASX 200 | .AXJO | 9029.7 | 0.1 | 2026-11-09 06:55 | 22 | cnbc | ok | cruda=2026-11-09T15:55:14.000+1000 | mercado=REG_MKT
 Suiza 20 (SMI) | .SSMI | 14796.5 | None | - | - | cnbc | ok | cruda=2026-11-06 | mercado=REG_MKT
 Noruega 25 (OBX) | .OBX | 1967.86 | None | - | - | cnbc | ok | cruda=2026-11-06 | mercado=REG_MKT
 Italia 40 (FTSE MIB) | .FTMIB | 50052.96 | -0.9 | - | - | cnbc | ok | cruda=2026-11-06 | mercado=REG_MKT
@@ -21,32 +21,32 @@ Holanda 25 (AEX) | .AEX | 1120.55 | None | - | - | cnbc | ok | cruda=2026-11-06 
 US MidCap 400 | .MID | 3602.5 | 0.56 | - | - | cnbc | ok | cruda=2026-11-06 | mercado=REG_MKT
 Europe 600 (STOXX 600) | .STOXX | 648.33 | None | - | - | cnbc | ok | cruda=2026-11-06 | mercado=REG_MKT
 VIX | .VIX | 25.64 | -9.01 | - | - | cnbc | ok | cruda=2026-11-06 | mercado=REG_MKT
-WTI | @CL.1 | 91.29 | 0.51 | - | - | cnbc | ok | cruda=2026-11-08 | mercado=REG_MKT
-Brent | @LCO.1 | 98.33 | 0.01 | 2026-11-09 05:56 | 10 | cnbc | ok | cruda=2026-11-09T05:56:58.000+0100 | mercado=REG_MKT
-Gas natural EEUU | @NG.1 | 3.023 | 0.83 | - | - | cnbc | ok | cruda=2026-11-08 | mercado=REG_MKT
-Oro | @GC.1 | 4133.0 | 1.43 | - | - | cnbc | ok | cruda=2026-11-08 | mercado=REG_MKT
-Plata | @SI.1 | 53.125 | 2.28 | - | - | cnbc | ok | cruda=2026-11-08 | mercado=REG_MKT
-DXY | .DXY | 102.109 | -0.18 | 2026-11-09 06:07 | 0 | cnbc | ok | cruda=2026-11-09T00:07:02.000-0500 | mercado=REG_MKT
-EUR/USD | EUR= | 1.1159 | 0.1436 | 2026-11-09 06:07 | 0 | cnbc | ok | cruda=2026-11-09T00:07:00.000-0500 | mercado=REG_MKT
-GBP/USD | GBP= | 1.3377 | 0.21 | 2026-11-09 06:07 | 0 | cnbc | ok | cruda=2026-11-09T00:07:00.000-0500 | mercado=REG_MKT
-USD/JPY | JPY= | 158.21 | -0.1515 | 2026-11-09 06:07 | 0 | cnbc | ok | cruda=2026-11-09T00:07:00.000-0500 | mercado=REG_MKT
-USD/CAD | CAD= | 1.4102 | -0.184 | 2026-11-09 06:06 | 1 | cnbc | ok | cruda=2026-11-09T00:06:00.000-0500 | mercado=REG_MKT
-AUD/USD | AUD= | 0.6886 | 0.34 | 2026-11-09 06:07 | 0 | cnbc | ok | cruda=2026-11-09T00:07:00.000-0500 | mercado=REG_MKT
-NZD/USD | NZD= | 0.559 | 0.8115 | 2026-11-09 06:07 | 0 | cnbc | ok | cruda=2026-11-09T00:07:00.000-0500 | mercado=REG_MKT
-USD/CHF | CHF= | 0.8199 | -0.0731 | 2026-11-09 06:07 | 0 | cnbc | ok | cruda=2026-11-09T00:07:00.000-0500 | mercado=REG_MKT
-EUR/GBP | EURGBP= | 0.834 | None | 2026-11-09 06:07 | 0 | cnbc | ok | cruda=2026-11-09T00:07:00.000-0500 | mercado=REG_MKT
-EUR/JPY | EURJPY= | 176.55 | -0.0057 | 2026-11-09 06:07 | 0 | cnbc | ok | cruda=2026-11-09T00:07:00.000-0500 | mercado=REG_MKT
-CAD/JPY | CADJPY= | 112.18 | 0.04 | 2026-11-09 06:07 | 0 | cnbc | ok | cruda=2026-11-09T00:07:00.000-0500 | mercado=REG_MKT
-Treasury 2Y (rendimiento) | US2Y | 4.538 | -0.0313 | 2026-11-09 06:05 | 1 | cnbc | ok | cruda=2026-11-09T00:05:57.000-0500 | mercado=REG_MKT
-Treasury 10Y (rendimiento) | US10Y | 4.878 | 0.391 | 2026-11-09 06:06 | 0 | cnbc | ok | cruda=2026-11-09T00:06:59.000-0500 | mercado=REG_MKT
-FUT Russell 2000 | @TFS.1 | 2782.9 | 0.81 | - | - | cnbc | ok | cruda=2026-11-08 | mercado=REG_MKT
-FUT VIX | @VX.1 | 22.35 | -5.67 | - | - | cnbc | ok | cruda=2026-11-08 | mercado=REG_MKT
-FUT DXY | @DX.1 | 102.015 | -0.16 | - | - | cnbc | ok | cruda=2026-11-08 | mercado=REG_MKT
-FUT Nikkei | @NK.1 | 59295.0 | 1.77 | - | - | cnbc | ok | cruda=2026-11-08 | mercado=REG_MKT
-FUT FTSE 100 | @FFI.1 | 10691.0 | 0.04 | 2026-11-09 05:57 | 10 | cnbc | ok | cruda=2026-11-09T05:57:00.000+0100 | mercado=REG_MKT
-FUT S&P 500 | @SP.1 | 7445.25 | 0.58 | - | - | cnbc | ok | cruda=2026-11-08 | mercado=REG_MKT
-FUT Nasdaq 100 | @ND.1 | 27213.25 | 0.47 | - | - | cnbc | ok | cruda=2026-11-08 | mercado=REG_MKT
-FUT Dow (verificar) | @DJ.1 | 51771.0 | 0.75 | - | - | cnbc | ok | cruda=2026-11-08 | mercado=REG_MKT
+WTI | @CL.1 | 90.18 | -0.72 | 2026-11-09 07:07 | 10 | cnbc | ok | cruda=2026-11-09T01:07:05.000-0500 | mercado=REG_MKT
+Brent | @LCO.1 | 97.07 | -1.27 | 2026-11-09 07:07 | 10 | cnbc | ok | cruda=2026-11-09T07:07:07.000+0100 | mercado=REG_MKT
+Gas natural EEUU | @NG.1 | 3.035 | 1.23 | 2026-11-09 07:06 | 10 | cnbc | ok | cruda=2026-11-09T01:06:38.000-0500 | mercado=REG_MKT
+Oro | @GC.1 | 4128.8 | 1.32 | 2026-11-09 07:07 | 10 | cnbc | ok | cruda=2026-11-09T01:07:03.000-0500 | mercado=REG_MKT
+Plata | @SI.1 | 52.84 | 1.73 | 2026-11-09 07:07 | 10 | cnbc | ok | cruda=2026-11-09T01:07:03.000-0500 | mercado=REG_MKT
+DXY | .DXY | 102.078 | -0.22 | 2026-11-09 07:17 | 0 | cnbc | ok | cruda=2026-11-09T01:17:07.000-0500 | mercado=REG_MKT
+EUR/USD | EUR= | 1.1163 | 0.1795 | 2026-11-09 07:17 | 0 | cnbc | ok | cruda=2026-11-09T01:17:00.000-0500 | mercado=REG_MKT
+GBP/USD | GBP= | 1.3384 | 0.26 | 2026-11-09 07:17 | 0 | cnbc | ok | cruda=2026-11-09T01:17:00.000-0500 | mercado=REG_MKT
+USD/JPY | JPY= | 158.21 | -0.1515 | 2026-11-09 07:17 | 0 | cnbc | ok | cruda=2026-11-09T01:17:00.000-0500 | mercado=REG_MKT
+USD/CAD | CAD= | 1.41 | -0.1982 | 2026-11-09 07:17 | 0 | cnbc | ok | cruda=2026-11-09T01:17:00.000-0500 | mercado=REG_MKT
+AUD/USD | AUD= | 0.689 | 0.39 | 2026-11-09 07:17 | 0 | cnbc | ok | cruda=2026-11-09T01:17:00.000-0500 | mercado=REG_MKT
+NZD/USD | NZD= | 0.56 | 0.9919 | 2026-11-09 07:17 | 0 | cnbc | ok | cruda=2026-11-09T01:17:00.000-0500 | mercado=REG_MKT
+USD/CHF | CHF= | 0.8194 | -0.1341 | 2026-11-09 07:17 | 0 | cnbc | ok | cruda=2026-11-09T01:17:00.000-0500 | mercado=REG_MKT
+EUR/GBP | EURGBP= | 0.8339 | -0.012 | 2026-11-09 07:17 | 0 | cnbc | ok | cruda=2026-11-09T01:17:00.000-0500 | mercado=REG_MKT
+EUR/JPY | EURJPY= | 176.61 | 0.03 | 2026-11-09 07:17 | 0 | cnbc | ok | cruda=2026-11-09T01:17:00.000-0500 | mercado=REG_MKT
+CAD/JPY | CADJPY= | 112.18 | 0.04 | 2026-11-09 07:17 | 0 | cnbc | ok | cruda=2026-11-09T01:17:00.000-0500 | mercado=REG_MKT
+Treasury 2Y (rendimiento) | US2Y | 4.53 | -0.0156 | 2026-11-09 07:16 | 0 | cnbc | ok | cruda=2026-11-09T01:16:51.000-0500 | mercado=REG_MKT
+Treasury 10Y (rendimiento) | US10Y | 4.864 | 0.1029 | 2026-11-09 07:17 | 0 | cnbc | ok | cruda=2026-11-09T01:17:04.000-0500 | mercado=REG_MKT
+FUT Russell 2000 | @TFS.1 | 2779.6 | 0.69 | 2026-11-09 07:07 | 10 | cnbc | ok | cruda=2026-11-09T01:07:03.000-0500 | mercado=REG_MKT
+FUT VIX | @VX.1 | 22.62 | -4.53 | 2026-11-09 07:06 | 10 | cnbc | ok | cruda=2026-11-09T01:06:41.039-0500 | mercado=REG_MKT
+FUT DXY | @DX.1 | 101.995 | -0.18 | 2026-11-09 07:07 | 10 | cnbc | ok | cruda=2026-11-09T01:07:06.000-0500 | mercado=REG_MKT
+FUT Nikkei | @NK.1 | 58975.0 | 1.22 | 2026-11-09 07:06 | 10 | cnbc | ok | cruda=2026-11-09T01:06:49.000-0500 | mercado=REG_MKT
+FUT FTSE 100 | @FFI.1 | 10684.0 | -0.02 | 2026-11-09 07:07 | 10 | cnbc | ok | cruda=2026-11-09T07:07:06.000+0100 | mercado=REG_MKT
+FUT S&P 500 | @SP.1 | 7428.5 | 0.36 | 2026-11-09 07:07 | 10 | cnbc | ok | cruda=2026-11-09T01:07:07.000-0500 | mercado=REG_MKT
+FUT Nasdaq 100 | @ND.1 | 27126.0 | 0.15 | 2026-11-09 07:07 | 10 | cnbc | ok | cruda=2026-11-09T01:07:07.000-0500 | mercado=REG_MKT
+FUT Dow (verificar) | @DJ.1 | 51699.0 | 0.61 | 2026-11-09 07:07 | 10 | cnbc | ok | cruda=2026-11-09T01:07:06.000-0500 | mercado=REG_MKT
 
 HISTORIAL (desde el historial propio; cada dia = ultimo valor visto ese dia; los dias de 24h como oro o divisas son aproximados; '-' = aun no hay sesiones suficientes)
 instrumento | sesiones en historial | var% vs 1 sesion antes | var% vs 5 sesiones antes | var% vs 20 sesiones antes | max 20 ses | min 20 ses
@@ -54,8 +54,8 @@ S&P 500 | 44 | +0.31 | -2.68 | -5.56 | 7807.24 | 7353.73
 EE.UU. 2000 (Russell 2000) | 44 | +0.89 | -2.05 | -1.88 | 2859.2167 | 2721.3701
 EE.UU. 30 (Dow Jones) | 44 | -0.46 | -0.94 | -0.71 | 53356.12 | 51285.73
 Alemania 40 (DAX) | 45 | -1.92 | +0.01 | +2.92 | 26437.67 | 25181.65
-Japon 225 (Nikkei) | 41 | +3.08 | -6.46 | -14.25 | 69030.92 | 57434.77
-ASX 200 | 46 | +0.35 | +2.22 | +3.07 | 9065.1 | 8719.7
+Japon 225 (Nikkei) | 41 | +2.36 | -7.11 | -14.85 | 69030.92 | 57434.77
+ASX 200 | 46 | +0.10 | +1.96 | +2.81 | 9065.1 | 8719.7
 Suiza 20 (SMI) | 45 | -1.14 | -0.10 | +7.32 | 15022.85 | 13877.84
 Noruega 25 (OBX) | 45 | -1.33 | -4.46 | -0.53 | 2059.64 | 1967.86
 Italia 40 (FTSE MIB) | 45 | -0.90 | +1.12 | +0.62 | 51031.02 | 48383.66
@@ -70,21 +70,21 @@ Holanda 25 (AEX) | 45 | -0.77 | -1.22 | -0.92 | 1142.88 | 1120.55
 US MidCap 400 | 44 | +0.56 | -1.63 | -1.82 | 3725.7 | 3582.28
 Europe 600 (STOXX 600) | 45 | -1.00 | +0.24 | +2.66 | 657.4 | 635.01
 VIX | 45 | -9.01 | +32.03 | +72.78 | 28.18 | 15.21
-WTI | 45 | +1.19 | -5.36 | -2.61 | 104.12 | 88.12
-Brent | 46 | +0.81 | -6.15 | -7.80 | 117.64 | 94.62
-Gas natural EEUU | 44 | +1.27 | +5.85 | -6.12 | 3.283 | 2.602
-Oro | 45 | +1.56 | +4.12 | -1.37 | 4181.1 | 3898.9
-Plata | 45 | +2.32 | +4.40 | -12.21 | 59.525 | 49.276
-DXY | 46 | -0.10 | +0.36 | -0.47 | 102.553 | 101.505
-EUR/USD | 46 | +0.12 | -0.23 | +0.05 | 1.1239 | 1.1122
-GBP/USD | 49 | +0.10 | -0.21 | +0.94 | 1.3471 | 1.3191
+WTI | 46 | -1.22 | -6.15 | -4.21 | 104.12 | 88.12
+Brent | 46 | -0.48 | -7.35 | -8.98 | 117.64 | 94.62
+Gas natural EEUU | 45 | +0.40 | +4.84 | -4.17 | 3.283 | 2.602
+Oro | 46 | -0.10 | +4.78 | -1.16 | 4181.1 | 3898.9
+Plata | 46 | -0.54 | +6.20 | -11.23 | 58.0 | 49.276
+DXY | 46 | -0.13 | +0.33 | -0.50 | 102.553 | 101.505
+EUR/USD | 46 | +0.15 | -0.20 | +0.09 | 1.1239 | 1.1122
+GBP/USD | 49 | +0.15 | -0.16 | +1.00 | 1.3471 | 1.3191
 USD/JPY | 48 | -0.03 | +0.17 | -0.06 | 158.66 | 156.76
-USD/CAD | 51 | -0.10 | +0.83 | -0.79 | 1.4236 | 1.3973
-AUD/USD | 50 | +0.28 | -1.57 | -1.19 | 0.7053 | 0.6867
-NZD/USD | 51 | +0.79 | -0.45 | -0.34 | 0.57 | 0.5546
-USD/CHF | 51 | +0.02 | +0.18 | -1.49 | 0.8346 | 0.8148
-EUR/GBP | 51 | +0.02 | -0.01 | -1.35 | 0.8449 | 0.8331
-EUR/JPY | 48 | +0.09 | -0.05 | -0.39 | 177.81 | 175.66
+USD/CAD | 51 | -0.11 | +0.82 | -0.80 | 1.4236 | 1.3973
+AUD/USD | 50 | +0.33 | -1.52 | -1.13 | 0.7053 | 0.6867
+NZD/USD | 51 | +0.97 | -0.27 | -0.16 | 0.57 | 0.5546
+USD/CHF | 51 | -0.04 | +0.12 | -1.55 | 0.8346 | 0.8148
+EUR/GBP | 51 | +0.01 | -0.02 | -1.36 | 0.8449 | 0.8331
+EUR/JPY | 48 | +0.12 | -0.02 | -0.36 | 177.81 | 175.66
 CAD/JPY | 48 | +0.08 | -0.63 | +0.77 | 113.29 | 111.18
-Treasury 2Y (rendimiento) | 45 | +0.49 | -0.98 | -5.28 | 4.823 | 4.514
-Treasury 10Y (rendimiento) | 44 | +0.56 | -0.33 | -6.98 | 5.217 | 4.839
+Treasury 2Y (rendimiento) | 45 | +0.31 | -1.16 | -5.45 | 4.823 | 4.514
+Treasury 10Y (rendimiento) | 44 | +0.27 | -0.61 | -7.25 | 5.217 | 4.839
