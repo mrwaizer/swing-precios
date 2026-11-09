@@ -1,7 +1,7 @@
 name: precios
 on:
   schedule:
-    - cron: "7,37 4-16 * * 1-5"
+    - cron: "7,37 4-19 * * 1-5"
   workflow_dispatch:
     inputs:
       handoff:
@@ -36,7 +36,7 @@ jobs:
           while true; do
             H=$(TZ=Europe/Andorra date +%H%M)
             NOW=$(date +%s)
-            if [ "$H" -gt 1745 ] || [ $(( NOW - START )) -gt 20400 ]; then break; fi
+            if [ "$H" -gt 2115 ] || [ $(( NOW - START )) -gt 20400 ]; then break; fi
             python fetch_prices.py || true
             git add precios.json precios.txt historial.csv
             git commit -m "precios $(date -u +%F_%H:%M)" || echo "sin cambios"
@@ -45,7 +45,7 @@ jobs:
             sleep 540
           done
           H=$(TZ=Europe/Andorra date +%H%M)
-          if [ "$H" -le 1745 ]; then
+          if [ "$H" -le 2115 ]; then
             echo "Relevo: lanzo el siguiente bucle"
             gh workflow run precios.yml -f handoff=true
           fi
