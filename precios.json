@@ -1,7 +1,7 @@
 {
- "generado_utc": "2026-11-13 05:25",
+ "generado_utc": "2026-11-13 05:35",
  "sondeo": [
-  "cnbc HTTP 200 38103 bytes",
+  "cnbc HTTP 200 38101 bytes",
   "cnbc simbolos devueltos 46",
   "semilla historico ok=0 fallo=0 claves_barra="
  ],
@@ -51,11 +51,11 @@
    "simbolo": ".N225",
    "estado": "ok",
    "fuente": "cnbc",
-   "ultimo": 61354.64,
-   "var_pct": 0.88,
-   "hora_cruda": "2026-11-13T14:10:55.000+0900",
+   "ultimo": 61273.27,
+   "var_pct": 0.75,
+   "hora_cruda": "2026-11-13T14:20:05.000+0900",
    "mercado": "REG_MKT",
-   "hora_andorra": "2026-11-13 06:10",
+   "hora_andorra": "2026-11-13 06:20",
    "antiguedad_min": 15
   },
   {
@@ -63,11 +63,11 @@
    "simbolo": ".AXJO",
    "estado": "ok",
    "fuente": "cnbc",
-   "ultimo": 9080.7,
-   "var_pct": -0.72,
-   "hora_cruda": "2026-11-13T15:05:44.000+1000",
+   "ultimo": 9082.2,
+   "var_pct": -0.71,
+   "hora_cruda": "2026-11-13T15:14:44.000+1000",
    "mercado": "REG_MKT",
-   "hora_andorra": "2026-11-13 06:05",
+   "hora_andorra": "2026-11-13 06:14",
    "antiguedad_min": 20
   },
   {
@@ -207,11 +207,11 @@
    "simbolo": "@CL.1",
    "estado": "ok",
    "fuente": "cnbc",
-   "ultimo": 88.17,
-   "var_pct": -0.64,
-   "hora_cruda": "2026-11-13T00:15:49.000-0500",
+   "ultimo": 88.18,
+   "var_pct": -0.63,
+   "hora_cruda": "2026-11-13T00:25:03.000-0500",
    "mercado": "REG_MKT",
-   "hora_andorra": "2026-11-13 06:15",
+   "hora_andorra": "2026-11-13 06:25",
    "antiguedad_min": 10
   },
   {
@@ -219,11 +219,11 @@
    "simbolo": "@LCO.1",
    "estado": "ok",
    "fuente": "cnbc",
-   "ultimo": 95.51,
-   "var_pct": -0.32,
-   "hora_cruda": "2026-11-13T06:15:57.000+0100",
+   "ultimo": 95.54,
+   "var_pct": -0.29,
+   "hora_cruda": "2026-11-13T06:25:08.000+0100",
    "mercado": "REG_MKT",
-   "hora_andorra": "2026-11-13 06:15",
+   "hora_andorra": "2026-11-13 06:25",
    "antiguedad_min": 10
   },
   {
@@ -233,21 +233,21 @@
    "fuente": "cnbc",
    "ultimo": 3.325,
    "var_pct": -0.45,
-   "hora_cruda": "2026-11-13T00:15:00.000-0500",
+   "hora_cruda": "2026-11-13T00:25:04.000-0500",
    "mercado": "REG_MKT",
-   "hora_andorra": "2026-11-13 06:15",
-   "antiguedad_min": 11
+   "hora_andorra": "2026-11-13 06:25",
+   "antiguedad_min": 10
   },
   {
    "instrumento": "Oro",
    "simbolo": "@GC.1",
    "estado": "ok",
    "fuente": "cnbc",
-   "ultimo": 3919.5,
-   "var_pct": 0.88,
-   "hora_cruda": "2026-11-13T00:15:54.000-0500",
+   "ultimo": 3921.2,
+   "var_pct": 0.92,
+   "hora_cruda": "2026-11-13T00:25:08.000-0500",
    "mercado": "REG_MKT",
-   "hora_andorra": "2026-11-13 06:15",
+   "hora_andorra": "2026-11-13 06:25",
    "antiguedad_min": 10
   },
   {
@@ -255,11 +255,11 @@
    "simbolo": "@SI.1",
    "estado": "ok",
    "fuente": "cnbc",
-   "ultimo": 50.215,
-   "var_pct": 0.3,
-   "hora_cruda": "2026-11-13T00:15:54.000-0500",
+   "ultimo": 50.195,
+   "var_pct": 0.26,
+   "hora_cruda": "2026-11-13T00:25:01.000-0500",
    "mercado": "REG_MKT",
-   "hora_andorra": "2026-11-13 06:15",
+   "hora_andorra": "2026-11-13 06:25",
    "antiguedad_min": 10
   },
   {
@@ -269,9 +269,9 @@
    "fuente": "cnbc",
    "ultimo": 103.175,
    "var_pct": null,
-   "hora_cruda": "2026-11-13T00:25:58.000-0500",
+   "hora_cruda": "2026-11-13T00:35:10.000-0500",
    "mercado": "REG_MKT",
-   "hora_andorra": "2026-11-13 06:25",
+   "hora_andorra": "2026-11-13 06:35",
    "antiguedad_min": 0
   },
   {
@@ -281,10 +281,10 @@
    "fuente": "cnbc",
    "ultimo": 1.1059,
    "var_pct": 0.0543,
-   "hora_cruda": "2026-11-13T00:25:00.000-0500",
+   "hora_cruda": "2026-11-13T00:35:00.000-0500",
    "mercado": "REG_MKT",
-   "hora_andorra": "2026-11-13 06:25",
-   "antiguedad_min": 1
+   "hora_andorra": "2026-11-13 06:35",
+   "antiguedad_min": 0
   },
   {
    "instrumento": "GBP/USD",
@@ -293,10 +293,10 @@
    "fuente": "cnbc",
    "ultimo": 1.3226,
    "var_pct": -0.0076,
-   "hora_cruda": "2026-11-13T00:25:00.000-0500",
+   "hora_cruda": "2026-11-13T00:35:00.000-0500",
    "mercado": "REG_MKT",
-   "hora_andorra": "2026-11-13 06:25",
-   "antiguedad_min": 1
+   "hora_andorra": "2026-11-13 06:35",
+   "antiguedad_min": 0
   },
   {
    "instrumento": "USD/JPY",
@@ -305,58 +305,58 @@
    "fuente": "cnbc",
    "ultimo": 159.94,
    "var_pct": 0.06,
-   "hora_cruda": "2026-11-13T00:25:00.000-0500",
+   "hora_cruda": "2026-11-13T00:35:00.000-0500",
    "mercado": "REG_MKT",
-   "hora_andorra": "2026-11-13 06:25",
-   "antiguedad_min": 1
+   "hora_andorra": "2026-11-13 06:35",
+   "antiguedad_min": 0
   },
   {
    "instrumento": "USD/CAD",
    "simbolo": "CAD=",
    "estado": "ok",
    "fuente": "cnbc",
-   "ultimo": 1.4259,
-   "var_pct": 0.03,
-   "hora_cruda": "2026-11-13T00:25:00.000-0500",
+   "ultimo": 1.426,
+   "var_pct": 0.04,
+   "hora_cruda": "2026-11-13T00:35:00.000-0500",
    "mercado": "REG_MKT",
-   "hora_andorra": "2026-11-13 06:25",
-   "antiguedad_min": 1
+   "hora_andorra": "2026-11-13 06:35",
+   "antiguedad_min": 0
   },
   {
    "instrumento": "AUD/USD",
    "simbolo": "AUD=",
    "estado": "ok",
    "fuente": "cnbc",
-   "ultimo": 0.6798,
-   "var_pct": -0.1469,
-   "hora_cruda": "2026-11-13T00:25:00.000-0500",
+   "ultimo": 0.6797,
+   "var_pct": -0.1616,
+   "hora_cruda": "2026-11-13T00:35:00.000-0500",
    "mercado": "REG_MKT",
-   "hora_andorra": "2026-11-13 06:25",
-   "antiguedad_min": 1
+   "hora_andorra": "2026-11-13 06:35",
+   "antiguedad_min": 0
   },
   {
    "instrumento": "NZD/USD",
    "simbolo": "NZD=",
    "estado": "ok",
    "fuente": "cnbc",
-   "ultimo": 0.554,
-   "var_pct": -0.1082,
-   "hora_cruda": "2026-11-13T00:25:00.000-0500",
+   "ultimo": 0.5541,
+   "var_pct": -0.0902,
+   "hora_cruda": "2026-11-13T00:35:00.000-0500",
    "mercado": "REG_MKT",
-   "hora_andorra": "2026-11-13 06:25",
-   "antiguedad_min": 1
+   "hora_andorra": "2026-11-13 06:35",
+   "antiguedad_min": 0
   },
   {
    "instrumento": "USD/CHF",
    "simbolo": "CHF=",
    "estado": "ok",
    "fuente": "cnbc",
-   "ultimo": 0.8353,
-   "var_pct": 0.0239,
-   "hora_cruda": "2026-11-13T00:25:00.000-0500",
+   "ultimo": 0.8352,
+   "var_pct": 0.012,
+   "hora_cruda": "2026-11-13T00:35:00.000-0500",
    "mercado": "REG_MKT",
-   "hora_andorra": "2026-11-13 06:25",
-   "antiguedad_min": 1
+   "hora_andorra": "2026-11-13 06:35",
+   "antiguedad_min": 0
   },
   {
    "instrumento": "EUR/GBP",
@@ -365,10 +365,10 @@
    "fuente": "cnbc",
    "ultimo": 0.836,
    "var_pct": 0.08,
-   "hora_cruda": "2026-11-13T00:25:00.000-0500",
+   "hora_cruda": "2026-11-13T00:35:00.000-0500",
    "mercado": "REG_MKT",
-   "hora_andorra": "2026-11-13 06:25",
-   "antiguedad_min": 1
+   "hora_andorra": "2026-11-13 06:35",
+   "antiguedad_min": 0
   },
   {
    "instrumento": "EUR/JPY",
@@ -377,10 +377,10 @@
    "fuente": "cnbc",
    "ultimo": 176.88,
    "var_pct": 0.11,
-   "hora_cruda": "2026-11-13T00:25:00.000-0500",
+   "hora_cruda": "2026-11-13T00:35:00.000-0500",
    "mercado": "REG_MKT",
-   "hora_andorra": "2026-11-13 06:25",
-   "antiguedad_min": 1
+   "hora_andorra": "2026-11-13 06:35",
+   "antiguedad_min": 0
   },
   {
    "instrumento": "CAD/JPY",
@@ -389,10 +389,10 @@
    "fuente": "cnbc",
    "ultimo": 112.14,
    "var_pct": 0.03,
-   "hora_cruda": "2026-11-13T00:25:00.000-0500",
+   "hora_cruda": "2026-11-13T00:35:00.000-0500",
    "mercado": "REG_MKT",
-   "hora_andorra": "2026-11-13 06:25",
-   "antiguedad_min": 1
+   "hora_andorra": "2026-11-13 06:35",
+   "antiguedad_min": 0
   },
   {
    "instrumento": "Treasury 2Y (rendimiento)",
@@ -401,33 +401,33 @@
    "fuente": "cnbc",
    "ultimo": 4.861,
    "var_pct": 0.0117,
-   "hora_cruda": "2026-11-13T00:25:44.000-0500",
+   "hora_cruda": "2026-11-13T00:33:41.000-0500",
    "mercado": "REG_MKT",
-   "hora_andorra": "2026-11-13 06:25",
-   "antiguedad_min": 0
+   "hora_andorra": "2026-11-13 06:33",
+   "antiguedad_min": 1
   },
   {
    "instrumento": "Treasury 10Y (rendimiento)",
    "simbolo": "US10Y",
    "estado": "ok",
    "fuente": "cnbc",
-   "ultimo": 5.121,
-   "var_pct": 0.3527,
-   "hora_cruda": "2026-11-13T00:25:45.000-0500",
+   "ultimo": 5.123,
+   "var_pct": 0.3919,
+   "hora_cruda": "2026-11-13T00:29:40.000-0500",
    "mercado": "REG_MKT",
-   "hora_andorra": "2026-11-13 06:25",
-   "antiguedad_min": 0
+   "hora_andorra": "2026-11-13 06:29",
+   "antiguedad_min": 6
   },
   {
    "instrumento": "FUT Russell 2000",
    "simbolo": "@TFS.1",
    "estado": "ok",
    "fuente": "cnbc",
-   "ultimo": 2808.8,
-   "var_pct": 0.05,
-   "hora_cruda": "2026-11-13T00:15:53.000-0500",
+   "ultimo": 2808.0,
+   "var_pct": 0.02,
+   "hora_cruda": "2026-11-13T00:24:48.000-0500",
    "mercado": "REG_MKT",
-   "hora_andorra": "2026-11-13 06:15",
+   "hora_andorra": "2026-11-13 06:24",
    "antiguedad_min": 10
   },
   {
@@ -435,12 +435,12 @@
    "simbolo": "@VX.1",
    "estado": "ok",
    "fuente": "cnbc",
-   "ultimo": 19.06,
-   "var_pct": 0.51,
-   "hora_cruda": "2026-11-13T00:15:56.611-0500",
+   "ultimo": 19.1,
+   "var_pct": 0.72,
+   "hora_cruda": "2026-11-13T00:22:18.672-0500",
    "mercado": "REG_MKT",
-   "hora_andorra": "2026-11-13 06:15",
-   "antiguedad_min": 10
+   "hora_andorra": "2026-11-13 06:22",
+   "antiguedad_min": 13
   },
   {
    "instrumento": "FUT DXY",
@@ -449,9 +449,9 @@
    "fuente": "cnbc",
    "ultimo": 103.1,
    "var_pct": 0.01,
-   "hora_cruda": "2026-11-13T00:15:57.000-0500",
+   "hora_cruda": "2026-11-13T00:25:08.000-0500",
    "mercado": "REG_MKT",
-   "hora_andorra": "2026-11-13 06:15",
+   "hora_andorra": "2026-11-13 06:25",
    "antiguedad_min": 10
   },
   {
@@ -459,11 +459,11 @@
    "simbolo": "@NK.1",
    "estado": "ok",
    "fuente": "cnbc",
-   "ultimo": 61405.0,
-   "var_pct": 0.26,
-   "hora_cruda": "2026-11-13T00:15:55.000-0500",
+   "ultimo": 61285.0,
+   "var_pct": 0.07,
+   "hora_cruda": "2026-11-13T00:25:07.000-0500",
    "mercado": "REG_MKT",
-   "hora_andorra": "2026-11-13 06:15",
+   "hora_andorra": "2026-11-13 06:25",
    "antiguedad_min": 10
   },
   {
@@ -471,11 +471,11 @@
    "simbolo": "@FFI.1",
    "estado": "ok",
    "fuente": "cnbc",
-   "ultimo": 10871.0,
-   "var_pct": -0.25,
-   "hora_cruda": "2026-11-13T06:15:55.000+0100",
+   "ultimo": 10868.5,
+   "var_pct": -0.28,
+   "hora_cruda": "2026-11-13T06:25:08.000+0100",
    "mercado": "REG_MKT",
-   "hora_andorra": "2026-11-13 06:15",
+   "hora_andorra": "2026-11-13 06:25",
    "antiguedad_min": 10
   },
   {
@@ -483,11 +483,11 @@
    "simbolo": "@SP.1",
    "estado": "ok",
    "fuente": "cnbc",
-   "ultimo": 7619.25,
-   "var_pct": 0.05,
-   "hora_cruda": "2026-11-13T00:15:55.000-0500",
+   "ultimo": 7616.25,
+   "var_pct": 0.01,
+   "hora_cruda": "2026-11-13T00:25:07.000-0500",
    "mercado": "REG_MKT",
-   "hora_andorra": "2026-11-13 06:15",
+   "hora_andorra": "2026-11-13 06:25",
    "antiguedad_min": 10
   },
   {
@@ -495,11 +495,11 @@
    "simbolo": "@ND.1",
    "estado": "ok",
    "fuente": "cnbc",
-   "ultimo": 28370.5,
-   "var_pct": -0.05,
-   "hora_cruda": "2026-11-13T00:15:54.000-0500",
+   "ultimo": 28341.0,
+   "var_pct": -0.15,
+   "hora_cruda": "2026-11-13T00:25:06.000-0500",
    "mercado": "REG_MKT",
-   "hora_andorra": "2026-11-13 06:15",
+   "hora_andorra": "2026-11-13 06:25",
    "antiguedad_min": 10
   },
   {
@@ -509,9 +509,9 @@
    "fuente": "cnbc",
    "ultimo": 52425.0,
    "var_pct": 0.07,
-   "hora_cruda": "2026-11-13T00:15:53.000-0500",
+   "hora_cruda": "2026-11-13T00:24:51.000-0500",
    "mercado": "REG_MKT",
-   "hora_andorra": "2026-11-13 06:15",
+   "hora_andorra": "2026-11-13 06:24",
    "antiguedad_min": 10
   }
  ],
@@ -538,6 +538,11 @@
      "06:10",
      61354.64,
      0.88
+    ],
+    [
+     "06:20",
+     61273.27,
+     0.75
     ]
    ],
    "ASX 200": [
@@ -560,6 +565,11 @@
      "06:05",
      9080.7,
      -0.72
+    ],
+    [
+     "06:14",
+     9082.2,
+     -0.71
     ]
    ],
    "WTI": [
@@ -577,6 +587,11 @@
      "06:15",
      88.17,
      -0.64
+    ],
+    [
+     "06:25",
+     88.18,
+     -0.63
     ]
    ],
    "Brent": [
@@ -599,6 +614,11 @@
      "06:15",
      95.51,
      -0.32
+    ],
+    [
+     "06:25",
+     95.54,
+     -0.29
     ]
    ],
    "Gas natural EEUU": [
@@ -614,6 +634,11 @@
     ],
     [
      "06:15",
+     3.325,
+     -0.45
+    ],
+    [
+     "06:25",
      3.325,
      -0.45
     ]
@@ -633,6 +658,11 @@
      "06:15",
      3919.5,
      0.88
+    ],
+    [
+     "06:25",
+     3921.2,
+     0.92
     ]
    ],
    "Plata": [
@@ -650,6 +680,11 @@
      "06:15",
      50.215,
      0.3
+    ],
+    [
+     "06:25",
+     50.195,
+     0.26
     ]
    ],
    "DXY": [
@@ -670,6 +705,11 @@
     ],
     [
      "06:25",
+     103.175,
+     null
+    ],
+    [
+     "06:35",
      103.175,
      null
     ]
@@ -694,6 +734,11 @@
      "06:25",
      1.1059,
      0.0543
+    ],
+    [
+     "06:35",
+     1.1059,
+     0.0543
     ]
    ],
    "GBP/USD": [
@@ -714,6 +759,11 @@
     ],
     [
      "06:25",
+     1.3226,
+     -0.0076
+    ],
+    [
+     "06:35",
      1.3226,
      -0.0076
     ]
@@ -738,6 +788,11 @@
      "06:25",
      159.94,
      0.06
+    ],
+    [
+     "06:35",
+     159.94,
+     0.06
     ]
    ],
    "USD/CAD": [
@@ -760,6 +815,11 @@
      "06:25",
      1.4259,
      0.03
+    ],
+    [
+     "06:35",
+     1.426,
+     0.04
     ]
    ],
    "AUD/USD": [
@@ -782,6 +842,11 @@
      "06:25",
      0.6798,
      -0.1469
+    ],
+    [
+     "06:35",
+     0.6797,
+     -0.1616
     ]
    ],
    "NZD/USD": [
@@ -804,6 +869,11 @@
      "06:25",
      0.554,
      -0.1082
+    ],
+    [
+     "06:35",
+     0.5541,
+     -0.0902
     ]
    ],
    "USD/CHF": [
@@ -826,6 +896,11 @@
      "06:25",
      0.8353,
      0.0239
+    ],
+    [
+     "06:35",
+     0.8352,
+     0.012
     ]
    ],
    "EUR/GBP": [
@@ -846,6 +921,11 @@
     ],
     [
      "06:25",
+     0.836,
+     0.08
+    ],
+    [
+     "06:35",
      0.836,
      0.08
     ]
@@ -870,6 +950,11 @@
      "06:25",
      176.88,
      0.11
+    ],
+    [
+     "06:35",
+     176.88,
+     0.11
     ]
    ],
    "CAD/JPY": [
@@ -890,6 +975,11 @@
     ],
     [
      "06:25",
+     112.14,
+     0.03
+    ],
+    [
+     "06:35",
      112.14,
      0.03
     ]
@@ -914,6 +1004,11 @@
      "06:25",
      4.861,
      0.0117
+    ],
+    [
+     "06:33",
+     4.861,
+     0.0117
     ]
    ],
    "Treasury 10Y (rendimiento)": [
@@ -936,6 +1031,11 @@
      "06:25",
      5.121,
      0.3527
+    ],
+    [
+     "06:29",
+     5.123,
+     0.3919
     ]
    ],
    "FUT Russell 2000": [
@@ -953,6 +1053,11 @@
      "06:15",
      2808.8,
      0.05
+    ],
+    [
+     "06:24",
+     2808.0,
+     0.02
     ]
    ],
    "FUT VIX": [
@@ -970,6 +1075,11 @@
      "06:15",
      19.06,
      0.51
+    ],
+    [
+     "06:22",
+     19.1,
+     0.72
     ]
    ],
    "FUT DXY": [
@@ -985,6 +1095,11 @@
     ],
     [
      "06:15",
+     103.1,
+     0.01
+    ],
+    [
+     "06:25",
      103.1,
      0.01
     ]
@@ -1004,6 +1119,11 @@
      "06:15",
      61405.0,
      0.26
+    ],
+    [
+     "06:25",
+     61285.0,
+     0.07
     ]
    ],
    "FUT FTSE 100": [
@@ -1026,6 +1146,11 @@
      "06:15",
      10871.0,
      -0.25
+    ],
+    [
+     "06:25",
+     10868.5,
+     -0.28
     ]
    ],
    "FUT S&P 500": [
@@ -1043,6 +1168,11 @@
      "06:15",
      7619.25,
      0.05
+    ],
+    [
+     "06:25",
+     7616.25,
+     0.01
     ]
    ],
    "FUT Nasdaq 100": [
@@ -1060,6 +1190,11 @@
      "06:15",
      28370.5,
      -0.05
+    ],
+    [
+     "06:25",
+     28341.0,
+     -0.15
     ]
    ],
    "FUT Dow (verificar)": [
@@ -1075,6 +1210,11 @@
     ],
     [
      "06:15",
+     52425.0,
+     0.07
+    ],
+    [
+     "06:24",
      52425.0,
      0.07
     ]
