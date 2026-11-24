@@ -38,7 +38,9 @@ jobs:
             NOW=$(date +%s)
             if [ "$H" -gt 2115 ] || [ $(( NOW - START )) -gt 20400 ]; then break; fi
             python fetch_prices.py || true
+            python fetch_news.py || true
             git add precios.json precios.txt historial.csv
+            git add noticias.txt 2>/dev/null || true
             git commit -m "precios $(date -u +%F_%H:%M)" || echo "sin cambios"
             git pull --rebase --autostash || true
             git push || (git pull --rebase --autostash && git push) || true
